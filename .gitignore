@@ -7,7 +7,8 @@ build/
 
 # Environment variables
 .env
-
+# .js files
+*.js
 # Logs
 logs
 *.log
