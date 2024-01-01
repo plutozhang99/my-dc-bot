@@ -66,7 +66,7 @@ Follow these instructions to get a copy of the project up and running on your lo
     ```
 2. **Run the image**
     ```bash
-   docker run -d -p 3006:3006 --restart unless-stopped my_discord_bot
+   docker run --env-file .env -d -p 3001:3001 --restart unless-stopped plutos-discord-bot
     ```
    -d means run the container in the background
    --restart unless-stopped means restart the container if it crashes or if the host machine reboots
