@@ -8,12 +8,6 @@ const FIND_RESTAURANT_COMMAND: CommandData = {
     options: [
         {
             type: 3, // Type 3 means a string
-            name: 'country',
-            description: 'The country you\'re in',
-            required: true,
-        },
-        {
-            type: 3, // Type 3 means a string
             name: 'postal_code',
             description: 'Your postal code',
             required: true,
