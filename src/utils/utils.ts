@@ -55,6 +55,10 @@ export function getRandomEmoji(): string {
     return emojiList[Math.floor(Math.random() * emojiList.length)];
 }
 
+export function getRandomInt(max: number): number {
+    return Math.floor(Math.random() * max);
+}
+
 export function capitalize(str: string): string {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
