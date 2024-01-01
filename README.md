@@ -59,6 +59,19 @@ Follow these instructions to get a copy of the project up and running on your lo
 
    Ensure your bot's commands are registered with Discord. This might require running a separate script depending on how you've set up your command registration.
 
+### Use Docker to run the bot
+1. **Build the image**
+    ```bash
+    docker build -t plutos-discord-bot .
+    ```
+2. **Run the image**
+    ```bash
+   docker run -d -p 3006:3006 --restart unless-stopped my_discord_bot
+    ```
+   -d means run the container in the background
+   --restart unless-stopped means restart the container if it crashes or if the host machine reboots
+   3006:3006 means map the container's port 3006 to the host machine's port 3006
+
 ## Usage
 
 Once the bot is running and invited to a server:
