@@ -47,7 +47,7 @@ function constructRestaurantUrl(location: { lat: number; lng: number }, style: s
     const { lat, lng } = location;
     const locationStr = `${lat},${lng}`;
     //TODO: Let user choose radius
-    return style ? `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${locationStr}&radius=1500&opennow=true&type=restaurant&keyword=${style}&key=${API_KEY}` : `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${locationStr}&radius=1500&type=restaurant&&key=${API_KEY}`;
+    return style ? `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${locationStr}&radius=1500&opennow=true&type=restaurant&keyword=${style}&key=${API_KEY}` : `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${locationStr}&radius=1500&&opennow=true&type=restaurant&&key=${API_KEY}`;
 }
 
 async function fetchJson(url: string) {
