@@ -8,8 +8,8 @@ const FIND_RESTAURANT_COMMAND: CommandData = {
     options: [
         {
             type: 3, // Type 3 means a string
-            name: 'postal_code',
-            description: 'Your postal code',
+            name: 'address',
+            description: 'You can enter your zip code/address to get nearby restaurants',
             required: true,
         },
         {

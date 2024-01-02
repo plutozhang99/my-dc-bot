@@ -16,11 +16,11 @@ export const interactionsHandler = async (req: Request, res: Response) => {
     if (type === InteractionType.APPLICATION_COMMAND && data.name === 'find_restaurant') {
         console.log('Handling restaurant command');
         const userId = req.body.member.user.id;  // 获取用户ID
-        const postalCode = data.options.find((opt: { name: string; }) => opt.name === 'postal_code')!.value;  // 获取邮政编码
+        const address = data.options.find((opt: { name: string; }) => opt.name === 'address')!.value;  // 获取地址
         const style = data.options.find((opt: { name: string; }) => opt.name === 'style')?.value || '';  // 获取风格
         try {
             // 获取内容从handleRestaurantCommand
-            const content = await handleRestaurantCommand(postalCode, style, userId);
+            const content = await handleRestaurantCommand(address, style, userId);
             return res.send({
                 type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
                 data: { content },
